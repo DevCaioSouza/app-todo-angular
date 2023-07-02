@@ -7,14 +7,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class TodoInputAddItemsComponent {
   @Output() addTaskEmit = new EventEmitter();
-  public addTask: string = '';
+  public addItemToTaskList: string = '';
 
-  submit() {
-    this.addTask = this.addTask.trim()
+  submitTask() {
+    this.addItemToTaskList = this.addItemToTaskList.trim()
 
-    if (this.addTask) {
-      this.addTaskEmit.emit(this.addTask);
-      this.addTask = '';
+    if (this.addItemToTaskList) {
+      this.addTaskEmit.emit(this.addItemToTaskList);
+      this.addItemToTaskList = '';
     }
   }
 }
