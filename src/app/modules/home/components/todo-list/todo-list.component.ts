@@ -9,21 +9,23 @@ import { TaskList } from '../../model/task-list';
   styleUrls: ['./todo-list.component.scss'],
 })
 export class TodoListComponent {
-  public taskList: Array<TaskList> = [
-    { task: 'Minha nova Task', checked: true },
-    { task: 'Minha segunda Task', checked: false },
-  ];
+  public taskList: Array<TaskList> = [];
+
+  public setEmitTaskList(event: string) {
+    this.taskList.push({ task: event, checked: false });
+  }
 
   public deleteItemTaskList(event: number) {
     this.taskList.splice(event, 1);
   }
 
-  public deleteAllTaskList(){
-    const confirm = window.confirm("Deseja mesmo deletar todos os itens da lista?")
+  public deleteAllTaskList() {
+    const confirm = window.confirm(
+      'Deseja mesmo deletar todos os itens da lista?'
+    );
 
-    if(confirm){
+    if (confirm) {
       this.taskList = [];
     }
-
   }
 }
