@@ -27,7 +27,7 @@ export class TodoListComponent implements DoCheck {
 
   public deleteAllTaskList() {
     const confirm = window.confirm(
-      'Deseja mesmo deletar todos os itens da lista?'
+      'Do you really want to delete all tasks?'
     );
 
     if (confirm) {
