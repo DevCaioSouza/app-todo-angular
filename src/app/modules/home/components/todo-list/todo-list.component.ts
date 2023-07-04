@@ -34,4 +34,14 @@ export class TodoListComponent implements DoCheck {
       this.taskList = [];
     }
   }
+
+  public validationInput(event: string, index: number) {
+    if (!event.length) {
+      const confirm = window.confirm('Do you want to delete this item?');
+
+      if (confirm) {
+        this.deleteItemTaskList(index);
+      }
+    }
+  }
 }
