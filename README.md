@@ -1,3 +1,9 @@
+Hi. This is a Todo app made using Angular 17 Framework
+It saves your list on your browser's local storage, so you can check back on it when you restart your computer
+
+Access it via https://devcaio-app-todo-list.netlify.app/ . Check it out, it may be of good utility on your day's work
+
+
 # AppTodo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
